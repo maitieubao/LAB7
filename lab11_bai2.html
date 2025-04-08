@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 11 - Danh sách sản phẩm</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      color: #333;
+      padding: 20px;
+    }
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    table th,
+    table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+      font-size: 14px;
+    }
+    table th {
+      background-color: #2e86c1;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    /* Header phụ */
+    tr:nth-child(2) th {
+      background-color: #1b4f72;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+    /* Hàng xen kẽ */
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    tr:nth-child(odd) {
+      background-color: #fff;
+    }
+    tr:hover {
+      background-color: #eaeaea;
+      transition: background-color 0.3s ease;
+    }
+    /* Responsive design */
+    @media (max-width: 768px) {
+      table {
+        width: 100%;
+      }
+      table th, table td {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+    /* Dữ liệu mẫu được cập nhật: Ví dụ, SP001 thành MX123, Laptop Dell Inspiron thành iPhone 14 */
+  </style>
+</head>
+<body>
+  <table>
+    <!-- Hàng 1: Header chính -->
+    <tr>
+      <th>STT</th>
+      <th colspan="3">Thông tin sản phẩm</th>
+      <th>Giá bán</th>
+    </tr>
+    <!-- Hàng 2: Header phụ -->
+    <tr>
+      <th colspan="5">DANH SÁCH SẢN PHẨM – CỬA HÀNG ABC</th>
+    </tr>
+    <!-- Hàng dữ liệu -->
+    <tr>
+      <td>1</td>
+      <td>Mã: MX123<br>Tên: iPhone 14</td>
+      <td>Loại: Điện thoại</td>
+      <td>Tình trạng: Còn hàng</td>
+      <td>20,000,000₫</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Mã: MX124<br>Tên: Samsung Galaxy S23</td>
+      <td>Loại: Di động</td>
+      <td>Tình trạng: Hết hàng</td>
+      <td>18,500,000₫</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Mã: MX125<br>Tên: MacBook Pro 16"</td>
+      <td>Loại: Laptop</td>
+      <td>Tình trạng: Còn hàng</td>
+      <td>65,000,000₫</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Mã: MX126<br>Tên: TV LG 55 inch</td>
+      <td>Loại: Điện tử</td>
+      <td>Tình trạng: Còn hàng</td>
+      <td>22,000,000₫</td>
+    </tr>
+  </table>
+</body>
+</html>

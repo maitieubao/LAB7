@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 12 - Video</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #fff;
+        color: #333;
+        text-align: center;
+      }
+      .video-container {
+        max-width: 800px;
+        margin: auto;
+      }
+      iframe {
+        width: 100%;
+        height: 450px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .thumbnails {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .thumbnails img {
+        width: 150px;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .thumbnails img:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-container">
+      <h1>Thư viện Video</h1>
+      <!-- Iframe mặc định load video thứ nhất -->
+      <iframe
+        name="video-frame"
+        src="https://www.youtube.com/embed/DIuqOazfZuc?autoplay=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+      <div class="thumbnails">
+        <!-- Các liên kết thumbnail: mỗi khi bấm sẽ load video tương ứng vào iframe -->
+        <a
+          href="https://www.youtube.com/embed/DIuqOazfZuc?autoplay=1"
+          target="video-frame"
+        >
+          <img
+            src="https://i.ytimg.com/vi/aXqwQ_ZjY2A/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLA5FJSAB-94Q8gdWghUfPypAUXbWg"
+            alt="Video 1"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/embed/D-RaFaHOg-w?autoplay=1"
+          target="video-frame"
+        >
+          <img
+            src="https://i3.ytimg.com/vi/HSHPZ-jfN-Y/maxresdefault.jpg"
+            alt="Video 2"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/embed/bec6hCnh3yo?autoplay=1"
+          target="video-frame"
+        >
+          <img
+            src="https://i.ytimg.com/vi/bec6hCnh3yo/hqdefault.jpg?sqp=-oaymwFACKgBEF5IWvKriqkDMwgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAHwAQH4Af4JgALQBYoCDAgAEAEYQSBVKHIwDw==&rs=AOn4CLA6KOeaFqUrtCz2bBBtZkRWayyRIA"
+            alt="Video 3"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

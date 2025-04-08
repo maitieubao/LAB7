@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 12 - Tin tức với nhạc nền</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #fff;
+      color: #333;
+    }
+    .news-container {
+      max-width: 800px;
+      margin: auto;
+    }
+    .news-item {
+      margin-bottom: 20px;
+      padding-bottom: 10px; 
+      border-bottom: 1px solid #ddd;
+    }
+    .news-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .news-item h2 {
+      font-size: 20px;
+      color: #0073e6;
+      margin-bottom: 10px;
+    }
+    .news-item p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <!-- Nhạc nền tự động phát và lặp lại -->
+  <audio src="https://rr1---sn-i3b7kn6s.googlevideo.com/videoplayback?expire=1743778768&ei=cJ_vZ9nhLI6pir4P0qiGyAI&ip=104.28.193.189&id=o-AKk0vkKOkCnwMdT-rRkZHPRZ_HrEh0U6PAx3X44oWfFk&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AccgBcPfEezJDBUS9maRJJG1a0IDWgJKRFXtDr71N6wljeI-s9sHe7rShG3g4xwC-NUHZ3i2LD1LCSrj&vprv=1&svpuc=1&mime=audio%2Fmp4&ns=ER5gWSKDFwwf7VU5aoZqC6QQ&rqh=1&gir=yes&clen=4782342&dur=295.450&lmt=1742884058482430&keepalive=yes&lmw=1&c=TVHTML5&sefc=1&txp=6308224&n=kG7ah8PhcQIyDw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgYU47tb7Mz0FxiK72U9Gj3P_e3hWEmJhOnx6DYoCqA3ECIQC5H6N-ZAzpASYQAbq20FU9eCrLRMeUThBwBAFpNxqxQw%3D%3D&title=Là+Ai+Từ+Bỏ+Ai+Là+Ai+Vô+Tình+%28SS+Remix%29+-+Hương+Ly+♫+Ngày+Biệt+Ly+Người+Đi+Chẳng+Nói+Nên+Câu+Remix&rm=sn-4g5edz7z,sn-8pxuuxa-q5qk7z,sn-8pxuuxa-i5o6k7l&rrc=104,79,79&fexp=24350590,24350737,24350825,24350827,24350961,24351064,24351147,24351149,24351173,24351229,24351283,24351398,24351415,24351421,24351423,24351528,24351542,24351545&req_id=bed78039528ca3ee&ipbypass=yes&redirect_counter=3&cms_redirect=yes&cmsv=e&met=1743757192,&mh=z8&mip=117.3.83.58&mm=30&mn=sn-i3b7kn6s&ms=nxu&mt=1743756990&mv=m&mvi=1&pl=20&rms=nxu,au&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=ACuhMU0wRAIgB5MIs5owD-N_tK_IdatgxeFeS5XSxJQ-y9PRWkzlA0ICIGbaZfovppaMQYDTmU1lMSfhr7P18zeA6m8vl3gJGTs7" autoplay loop>
+    Trình duyệt của bạn không hỗ trợ audio.
+  </audio>
+
+  <div class="news-container">
+    <h1>Tin tức FPT PolySchool</h1>
+    <!-- Tin tức mẫu -->
+    <div class="news-item">
+      <img src="images/thumb1.png" alt="Thumbnail tin tức 1">
+      <h2>FPT PolySchool xây dựng nhà tình nghĩa hưởng ứng “FPT vì cộng đồng”</h2>
+      <p>Hưởng ứng chủ trương xóa nhà tạm, nhà dột nát của Thủ tướng, FPT PolySchool phối hợp triển khai công trình nhà tình nghĩa nhằm mang đến mái ấm vững chắc cho các hộ gia đình khó khăn.</p>
+    </div>
+    <div class="news-item">
+      <img src="images/thumb2.png" alt="Thumbnail tin tức 2">
+      <h2>Hành động thiết thực và tiên phong vì cộng đồng</h2>
+      <p>Ngày 14/3/2025, nhà trường trao 55 triệu đồng hỗ trợ xây dựng nhà tình nghĩa, sinh viên và nhân viên trực tiếp tham gia thi công, góp phần cải thiện điều kiện sống cho người dân.</p>
+    </div>
+    <div class="news-item">
+      <img src="images/thumb3.png" alt="Thumbnail tin tức 3">
+      <h2>Lan tỏa giá trị nhân văn và phát triển bền vững</h2>
+      <p>Với triết lý “Thực học - Thực nghiệp”, FPT PolySchool không chỉ đào tạo kiến thức mà còn truyền cảm hứng nhân văn, góp phần xây dựng xã hội công bằng và tiến bộ.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #333;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Header */
+.main-header {
+  background: linear-gradient(135deg, #2e86c1, #1b4f72);
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideDown 1s ease-out;
+}
+.main-header h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+/* Navigation */
+.module-nav {
+  background: #0073e6;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+}
+.module-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.module-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.module-nav ul li a:hover {
+  background-color: #005bb5;
+  transform: scale(1.1);
+  animation: pulse 0.5s infinite;
+}
+
+/* Iframe */
+iframe#module-content {
+  width: 100%;
+  max-width: 1200px;
+  height: 800px;
+  border: none;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Footer */
+.main-footer {
+  background: #002244;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
