@@ -1,139 +1,140 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <title>Lab 11 - Bảng điểm rèn luyện</title>
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      padding: 20px;
-      text-align: center;
-    }
-    h2 {
-      margin-bottom: 20px;
-      color: #0073e6;
-    }
-    table {
-      width: 80%;
-      margin: 0 auto 20px;
-      border-collapse: collapse;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    th, td {
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      text-align: left;
-      font-size: 14px;
-    }
-    /* Header chính */
-    tr:first-child th {
-      background: #005bb5;
-      color: #fff;
-      text-transform: uppercase;
-    }
-    /* Header phụ */
-    tr:nth-child(2) th {
-      background: #ffcc00;
-      color: #333;
-      font-size: 20px;
-      text-align: center;
-    }
-    /* Hàng dữ liệu xen kẽ */
-    tr:nth-child(odd):not(:first-child):not(:nth-child(2)) {
-      background: #f9f9f9;
-    }
-    tr:nth-child(even):not(:first-child):not(:nth-child(2)) {
-      background: #fff;
-    }
-    /* Cột STT căn giữa */
-    td:first-child {
-      text-align: center;
-      font-weight: bold;
-    }
-    /* Cột Thông tin sinh viên */
-    td:nth-child(2) {
-      font-weight: bold;
-      line-height: 1.4;
-    }
-    /* Cột Xếp loại */
-    td:last-child {
-      text-align: center;
-      font-weight: bold;
-      color: #fff;
-    }
-  </style>
-</head>
-<body>
-  <table>
-    <!-- Hàng 1: Header chính -->
-    <tr>
-      <th>STT</th>
-      <th colspan="3">Thông tin sinh viên</th>
-      <th>Xếp loại</th>
-    </tr>
-    <!-- Hàng 2: Header phụ -->
-    <tr>
-      <th colspan="5">BẢNG ĐIỂM – LỚP SD1902</th>
-    </tr>
-    <!-- Hàng dữ liệu -->
-    <tr>
-      <td>1</td>
-      <td>Mã SV: MX001<br>Họ tên: Nguyễn Văn X</td>
-      <td>Web1013</td>
-      <td>Điểm TB: 8.9</td>
-      <td>Giỏi</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Mã SV: MX002<br>Họ tên: Trần Thị Y</td>
-      <td>Web1013</td>
-      <td>Điểm TB: 7.6</td>
-      <td>Khá</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Mã SV: MX003<br>Họ tên: Lê Văn Z</td>
-      <td>Web1013</td>
-      <td>Điểm TB: 6.8</td>
-      <td>Trung bình</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Mã SV: MX004<br>Họ tên: Phạm Thị W</td>
-      <td>Web1013</td>
-      <td>Điểm TB: 9.3</td>
-      <td>Xuất sắc</td>
-    </tr>
-  </table>
-  
-  <script>
-    // Gán màu nền cho cột Xếp loại dựa trên giá trị
-    document.querySelectorAll("td:last-child").forEach(td => {
-      const text = td.textContent.trim();
-      if (text === "Giỏi") {
-        td.style.backgroundColor = "#28a745"; // xanh lá
-        td.style.color = "white";
-      } else if (text === "Khá") {
-        td.style.backgroundColor = "#ff0000"; // vàng
-        td.style.color = "black";
-      } else if (text === "Trung bình") {
-        td.style.backgroundColor = "#fd7e14"; // cam
-        td.style.color = "white";
-      } else if (text === "Xuất sắc") {
-        td.style.backgroundColor = "#dc3545"; // đỏ
-        td.style.color = "white";
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 11 - Bảng điểm rèn luyện</title>
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-    });
-  </script>
-</body>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 20px;
+        color: #0073e6;
+      }
+      table {
+        width: 80%;
+        margin: 0 auto 20px;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      th,
+      td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+        font-size: 14px;
+      }
+      /* Header chính */
+      tr:first-child th {
+        background: #005bb5;
+        color: #fff;
+        text-transform: uppercase;
+      }
+      /* Header phụ */
+      tr:nth-child(2) th {
+        background: #ffcc00;
+        color: #333;
+        font-size: 20px;
+        text-align: center;
+      }
+      /* Hàng dữ liệu xen kẽ */
+      tr:nth-child(odd):not(:first-child):not(:nth-child(2)) {
+        background: #f9f9f9;
+      }
+      tr:nth-child(even):not(:first-child):not(:nth-child(2)) {
+        background: #fff;
+      }
+      /* Cột STT căn giữa */
+      td:first-child {
+        text-align: center;
+        font-weight: bold;
+      }
+      /* Cột Thông tin sinh viên */
+      td:nth-child(2) {
+        font-weight: bold;
+        line-height: 1.4;
+      }
+      /* Cột Xếp loại */
+      td:last-child {
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <!-- Hàng 1: Header chính -->
+      <tr>
+        <th>STT</th>
+        <th colspan="3">Thông tin sinh viên</th>
+        <th>Xếp loại</th>
+      </tr>
+      <!-- Hàng 2: Header phụ -->
+      <tr>
+        <th colspan="5">BẢNG ĐIỂM – LỚP SD1902</th>
+      </tr>
+      <!-- Hàng dữ liệu -->
+      <tr>
+        <td>1</td>
+        <td>Mã SV: MX001<br />Họ tên: Nguyễn Văn X</td>
+        <td>Web1013</td>
+        <td>Điểm TB: 8.9</td>
+        <td>Giỏi</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Mã SV: MX002<br />Họ tên: Trần Thị Y</td>
+        <td>Web1013</td>
+        <td>Điểm TB: 7.6</td>
+        <td>Khá</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Mã SV: MX003<br />Họ tên: Lê Văn Z</td>
+        <td>Web1013</td>
+        <td>Điểm TB: 6.8</td>
+        <td>Trung bình</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Mã SV: MX004<br />Họ tên: Phạm Thị W</td>
+        <td>Web1013</td>
+        <td>Điểm TB: 9.3</td>
+        <td>Xuất sắc</td>
+      </tr>
+    </table>
+
+    <script>
+      // Gán màu nền cho cột Xếp loại dựa trên giá trị
+      document.querySelectorAll("td:last-child").forEach((td) => {
+        const text = td.textContent.trim();
+        if (text === "Giỏi") {
+          td.style.backgroundColor = "#a8d5ba"; // xanh lá nhạt hơn
+          td.style.color = "#2e7d32"; // xanh đậm
+        } else if (text === "Khá") {
+          td.style.backgroundColor = "#fff3cd"; // vàng nhạt hơn
+          td.style.color = "#856404"; // vàng đậm
+        } else if (text === "Trung bình") {
+          td.style.backgroundColor = "#ffe5b4"; // cam nhạt hơn
+          td.style.color = "#8a4b08"; // cam đậm
+        } else if (text === "Xuất sắc") {
+          td.style.backgroundColor = "#f8d7da"; // đỏ nhạt hơn
+          td.style.color = "#721c24"; // đỏ đậm
+        }
+      });
+    </script>
+  </body>
 </html>
